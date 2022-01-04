@@ -1,7 +1,9 @@
+import processing.core.PApplet;
+
 public class Ball {
     private int x;
-    private int y;
-    private int speed;
+    private final int y;
+    private final int speed;
 
     public Ball(int x, int y, int speed) {
         this.x = x;
@@ -9,28 +11,11 @@ public class Ball {
         this.speed = speed;
     }
 
-    public int getX() {
-        return x;
+    public void move() {
+        x += speed;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void draw(PApplet pApplet) {
+        pApplet.ellipse(x, y, 20, 20);
     }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
 }
