@@ -15,6 +15,12 @@ public class TryProcessing extends PApplet {
     private int x4 = 0;
 
 
+    Ball ball1 = new Ball(x1, HEIGHT / 4, SPEED_1);
+    Ball ball2 = new Ball(x2, HEIGHT * 2 / 4, SPEED_2);
+    Ball ball3 = new Ball(x3, HEIGHT * 3 / 4, SPEED_3);
+    Ball ball4 = new Ball(x4, HEIGHT * 4 / 4, SPEED_4);
+
+
     public static void main(String[] args) {
         PApplet.main("TryProcessing", args);
     }
@@ -32,9 +38,15 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void draw() {
-        ellipse(x1 += SPEED_1, HEIGHT / 4, DIAMETER, DIAMETER);
-        ellipse(x2 += SPEED_2, HEIGHT * 2 / 4, DIAMETER, DIAMETER);
-        ellipse(x3 += SPEED_3, HEIGHT * 3 / 4, DIAMETER, DIAMETER);
-        ellipse(x4 += SPEED_4, HEIGHT * 4 / 4, DIAMETER, DIAMETER);
+        ball1.setX(ball1.getX() + ball1.getSpeed());
+        ball2.setX(ball2.getX() + ball2.getSpeed());
+        ball3.setX(ball3.getX() + ball3.getSpeed());
+        ball4.setX(ball4.getX() + ball4.getSpeed());
+
+
+        ellipse(ball1.getX(), ball1.getY(), DIAMETER, DIAMETER);
+        ellipse(ball2.getX(), ball2.getY(), DIAMETER, DIAMETER);
+        ellipse(ball3.getX(), ball3.getY(), DIAMETER, DIAMETER);
+        ellipse(ball4.getX(), ball4.getY(), DIAMETER, DIAMETER);
     }
 }
