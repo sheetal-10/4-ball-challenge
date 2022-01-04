@@ -1,5 +1,8 @@
 import processing.core.PApplet;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class TryProcessing extends PApplet {
 
     public static final int WIDTH = 640;
@@ -13,6 +16,7 @@ public class TryProcessing extends PApplet {
     Ball ball2;
     Ball ball3;
     Ball ball4;
+    private List<Ball> balls;
 
     public static void main(String[] args) {
         PApplet.main("TryProcessing", args);
@@ -31,18 +35,13 @@ public class TryProcessing extends PApplet {
         ball2 = new Ball(0, HEIGHT * 2 / 4, SPEED_2);
         ball3 = new Ball(0, HEIGHT * 3 / 4, SPEED_3);
         ball4 = new Ball(0, HEIGHT * 4 / 4, SPEED_4);
+
+        balls = Arrays.asList(ball1, ball2, ball3, ball4);
     }
 
     @Override
     public void draw() {
-        ball1.move();
-        ball2.move();
-        ball3.move();
-        ball4.move();
-
-        ball1.draw(this);
-        ball2.draw(this);
-        ball3.draw(this);
-        ball4.draw(this);
+        balls.forEach(Ball::move);
+        balls.forEach(ball -> ball.draw(this));
     }
 }
