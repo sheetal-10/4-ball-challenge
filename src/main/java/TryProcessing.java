@@ -29,8 +29,6 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void setup() {
-        //ellipse(640/2, 480/2, 20, 20);
-        //executes only once whereas draw method will get executes again and again in loop
         ball1 = new Ball(0, HEIGHT / 4, SPEED_1);
         ball2 = new Ball(0, HEIGHT * 2 / 4, SPEED_2);
         ball3 = new Ball(0, HEIGHT * 3 / 4, SPEED_3);
