@@ -12,6 +12,12 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void setup() {
+        //ellipse(640/2, 480/2, 20, 20);
+        //executes only once where as draw method will get executes again and again in loop
+    }
+
+    @Override
+    public void draw() {
         ellipse(640/2, 480/2, 20, 20);
     }
 }
