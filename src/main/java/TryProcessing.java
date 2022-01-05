@@ -29,7 +29,7 @@ public class TryProcessing extends PApplet {
 
     @Override
     public void setup() {
-        ball1 = new Ball(0, HEIGHT / 4, SPEED_1);
+        ball1 = new Ball(0, HEIGHT * 1/ 4, SPEED_1);
         ball2 = new Ball(0, HEIGHT * 2 / 4, SPEED_2);
         ball3 = new Ball(0, HEIGHT * 3 / 4, SPEED_3);
         ball4 = new Ball(0, HEIGHT * 4 / 4, SPEED_4);
